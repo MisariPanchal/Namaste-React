@@ -1,4 +1,4 @@
-# Important Information
+# Life is fucking HELL...😈🔥💀
 
 # Parcel
 - Dev Build
