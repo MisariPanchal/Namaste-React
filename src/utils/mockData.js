@@ -1,71 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-/*
-1. Header
-  - Logo
-  - Nav Items
-2. Body
-  - Search
-  - Restaurant Container
-    - Restaurant Cards
-        - img
-        - name of restaurant, star rating, cuisine, delivery time
-3. Footer
-  - CopyRight
-  - Links
-  - Address
-  - Contact
-*/
-
-const Header = () => {
-  return (
-    <div className="header">
-      {/* Logo */}
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://cdn2.f-cdn.com/contestentries/2426851/74260034/6689bc27dfb41_thumb900.jpg"
-          alt="Logo not rendered"
-        />
-      </div>
-      {/* Nav Items */}
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-const styleCard = {
-  backgroundColor: "#f0f0f0",
-};
-
-const RestaurantCard = (props) => {
-  const { resData } = props;
-  const { imgSrc, name, cuisines, avgRating, costForTwo, deliveryTime } =
-    resData?.data;
-  return (
-    <div className="res-card" style={styleCard}>
-      <img
-        className="res-logo"
-        src={imgSrc}
-        alt="Restaurant Image not renderd"
-      />
-      <h3>{name}</h3>
-      <h4>{cuisines.join(", ")}</h4>
-      <h4>{avgRating} stars</h4>
-      <h4>₹{costForTwo / 100} for two</h4>
-      <h4>{deliveryTime} mins</h4>
-    </div>
-  );
-};
-
 const resList = [
   {
     type: "restaurant",
@@ -78,7 +10,7 @@ const resList = [
       area: "Tavarekere",
       totalRatingsString: "10000+ ratings",
       imgSrc:
-        "https://www.allrecipes.com/thmb/rOSWRQmSwBjWyAnnCVJcpd5xBnM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3574694-hot-fudge-ice-cream-bar-dessert-Allrecipes-Magazine-4x3-1-8b0b0580bfb14ae9bb8a9b3acb421ad5.jpg",
+        "https://food.fnr.sndimg.com/content/dam/images/food/fullset/2021/02/25/0/FNK_Chana-Masala_H2_s4x3.jpg.rend.hgtvcom.1280.960.85.suffix/1614271965516.webp",
       cuisines: ["Kerala", "Chinese"],
       tags: [],
       costForTwo: 30000,
@@ -220,7 +152,7 @@ const resList = [
       area: "Koramangala",
       totalRatingsString: "10000+ ratings",
       imgSrc:
-        "https://www.allrecipes.com/thmb/rOSWRQmSwBjWyAnnCVJcpd5xBnM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3574694-hot-fudge-ice-cream-bar-dessert-Allrecipes-Magazine-4x3-1-8b0b0580bfb14ae9bb8a9b3acb421ad5.jpg",
+        "https://s3.india.com/wp-content/uploads/2024/03/Feature-Image_-best-restaurant-in-Ahmedabad-Image-Credit_-Image-Source_-https___houseofmg.com_.jpg",
       cuisines: [
         "Biryani",
         "Andhra",
@@ -324,7 +256,7 @@ const resList = [
       area: "Btm Layout",
       totalRatingsString: "10000+ ratings",
       imgSrc:
-        "https://www.allrecipes.com/thmb/rOSWRQmSwBjWyAnnCVJcpd5xBnM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3574694-hot-fudge-ice-cream-bar-dessert-Allrecipes-Magazine-4x3-1-8b0b0580bfb14ae9bb8a9b3acb421ad5.jpg",
+        "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj1txNtWiNKFoYimosMZCt0Rq8y8jy1T3VyenK4xTXhXqOEkJrJU7Cu6fpzcVVuOnj_s8GkQ7qxu_dGsAaHkNUOt_lk6cxh48oDXcBYvHT6BUzYjTwvvFAbM55DrSnVSbz6pA0MLDpAEoU/w1200-h630-p-k-no-nu/kb9.jpg",
       cuisines: ["North Indian", "Biryani"],
       tags: [],
       costForTwo: 50000,
@@ -460,7 +392,7 @@ const resList = [
       area: "Koramangala",
       totalRatingsString: "10000+ ratings",
       imgSrc:
-        "https://www.allrecipes.com/thmb/rOSWRQmSwBjWyAnnCVJcpd5xBnM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3574694-hot-fudge-ice-cream-bar-dessert-Allrecipes-Magazine-4x3-1-8b0b0580bfb14ae9bb8a9b3acb421ad5.jpg",
+        "https://cdn.shopify.com/s/files/1/0256/3797/8165/files/vegan_marz_480x480.jpg?v=1673631091",
       cuisines: ["American", "Continental", "Desserts", "Italian"],
       tags: [],
       costForTwo: 45000,
@@ -602,7 +534,7 @@ const resList = [
       area: "Koramangala",
       totalRatingsString: "10000+ ratings",
       imgSrc:
-        "https://www.allrecipes.com/thmb/rOSWRQmSwBjWyAnnCVJcpd5xBnM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3574694-hot-fudge-ice-cream-bar-dessert-Allrecipes-Magazine-4x3-1-8b0b0580bfb14ae9bb8a9b3acb421ad5.jpg",
+        "https://images.deliveryhero.io/image/fd-my/LH/sleh-hero.jpg?width=480&height=360&quality=45",
       cuisines: ["North Indian", "Kebabs", "Biryani"],
       tags: [],
       costForTwo: 45000,
@@ -739,7 +671,7 @@ const resList = [
       area: "HSR Layout",
       totalRatingsString: "10000+ ratings",
       imgSrc:
-        "https://www.allrecipes.com/thmb/rOSWRQmSwBjWyAnnCVJcpd5xBnM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3574694-hot-fudge-ice-cream-bar-dessert-Allrecipes-Magazine-4x3-1-8b0b0580bfb14ae9bb8a9b3acb421ad5.jpg",
+        "https://img.etimg.com/thumb/msid-103105495,width-480,height-360,imgsize-73756,resizemode-75/fritters.jpg",
       cuisines: ["Indian", "South Indian", "Beverages"],
       tags: [],
       costForTwo: 20000,
@@ -881,7 +813,7 @@ const resList = [
       area: "Hsr Layout",
       totalRatingsString: "10000+ ratings",
       imgSrc:
-        "https://www.allrecipes.com/thmb/rOSWRQmSwBjWyAnnCVJcpd5xBnM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3574694-hot-fudge-ice-cream-bar-dessert-Allrecipes-Magazine-4x3-1-8b0b0580bfb14ae9bb8a9b3acb421ad5.jpg",
+        "https://img.etimg.com/thumb/msid-103709315,width-480,height-360,imgsize-1171305,resizemode-75/olan.jpg",
       cuisines: [
         "American",
         "Arabian",
@@ -984,7 +916,7 @@ const resList = [
       area: "BTM Layout",
       totalRatingsString: "10000+ ratings",
       imgSrc:
-        "https://www.allrecipes.com/thmb/rOSWRQmSwBjWyAnnCVJcpd5xBnM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3574694-hot-fudge-ice-cream-bar-dessert-Allrecipes-Magazine-4x3-1-8b0b0580bfb14ae9bb8a9b3acb421ad5.jpg",
+        "https://img.etimg.com/thumb/msid-34292897,width-480,height-360,imgsize-55568,resizemode-75/combining-two-different-flavours.jpg",
       cuisines: [
         "North Indian",
         "Home Food",
@@ -1128,7 +1060,7 @@ const resList = [
       area: "Koramangala",
       totalRatingsString: "1000+ ratings",
       imgSrc:
-        "https://www.allrecipes.com/thmb/rOSWRQmSwBjWyAnnCVJcpd5xBnM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3574694-hot-fudge-ice-cream-bar-dessert-Allrecipes-Magazine-4x3-1-8b0b0580bfb14ae9bb8a9b3acb421ad5.jpg",
+        "https://img.etimg.com/thumb/msid-113981470,width-480,height-360,imgsize-49218,resizemode-75/kashmiri-pulao.jpg",
       cuisines: ["North Indian", "South Indian"],
       tags: [],
       costForTwo: 30000,
@@ -1270,7 +1202,7 @@ const resList = [
       area: "BTM Layout",
       totalRatingsString: "5000+ ratings",
       imgSrc:
-        "https://www.allrecipes.com/thmb/rOSWRQmSwBjWyAnnCVJcpd5xBnM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3574694-hot-fudge-ice-cream-bar-dessert-Allrecipes-Magazine-4x3-1-8b0b0580bfb14ae9bb8a9b3acb421ad5.jpg",
+        "https://images.deliveryhero.io/image/fd-my/LH/l2nr-hero.jpg?width=480&height=360&quality=45",
       cuisines: ["Kerala", "Biryani", "Beverages"],
       tags: [],
       costForTwo: 20000,
@@ -1422,7 +1354,7 @@ const resList = [
       area: "Btm Layout",
       totalRatingsString: "10000+ ratings",
       imgSrc:
-        "https://www.allrecipes.com/thmb/rOSWRQmSwBjWyAnnCVJcpd5xBnM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3574694-hot-fudge-ice-cream-bar-dessert-Allrecipes-Magazine-4x3-1-8b0b0580bfb14ae9bb8a9b3acb421ad5.jpg",
+        "https://t4.ftcdn.net/jpg/13/50/01/35/360_F_1350013555_m9jrMWIlhhLhfmS6YAeMGNnXbOb7zwtT.jpg",
       cuisines: ["North Indian"],
       tags: [],
       costForTwo: 25000,
@@ -1564,7 +1496,7 @@ const resList = [
       area: "Jayanagar",
       totalRatingsString: "10000+ ratings",
       imgSrc:
-        "https://www.allrecipes.com/thmb/rOSWRQmSwBjWyAnnCVJcpd5xBnM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3574694-hot-fudge-ice-cream-bar-dessert-Allrecipes-Magazine-4x3-1-8b0b0580bfb14ae9bb8a9b3acb421ad5.jpg",
+        "https://t3.ftcdn.net/jpg/01/94/87/72/360_F_194877220_TTkGUCLk0MgzThYiFvguoKuVaSMEdCXw.jpg",
       cuisines: [
         "Biryani",
         "Hyderabadi",
@@ -1711,7 +1643,7 @@ const resList = [
       area: "Jayanagar",
       totalRatingsString: "50+ ratings",
       imgSrc:
-        "https://www.allrecipes.com/thmb/rOSWRQmSwBjWyAnnCVJcpd5xBnM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3574694-hot-fudge-ice-cream-bar-dessert-Allrecipes-Magazine-4x3-1-8b0b0580bfb14ae9bb8a9b3acb421ad5.jpg",
+        "https://t3.ftcdn.net/jpg/06/32/40/68/360_F_632406840_YZrbTvfjfRb7hoMtme97eqd4YRT82fMB.jpg",
       cuisines: ["Biryani", "South Indian", "Kebabs"],
       tags: [],
       costForTwo: 25000,
@@ -1848,7 +1780,7 @@ const resList = [
       area: "Btm Layout",
       totalRatingsString: "10000+ ratings",
       imgSrc:
-        "https://www.allrecipes.com/thmb/rOSWRQmSwBjWyAnnCVJcpd5xBnM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3574694-hot-fudge-ice-cream-bar-dessert-Allrecipes-Magazine-4x3-1-8b0b0580bfb14ae9bb8a9b3acb421ad5.jpg",
+        "https://t3.ftcdn.net/jpg/04/01/04/72/360_F_401047268_mxBFHCqaOyj6ezArIBYREMPO4t2M7uxk.jpg",
       cuisines: ["Bihari", "North Indian", "Desserts"],
       tags: [],
       costForTwo: 25000,
@@ -1990,7 +1922,7 @@ const resList = [
       area: "HSR Layout",
       totalRatingsString: "10000+ ratings",
       imgSrc:
-        "https://www.allrecipes.com/thmb/rOSWRQmSwBjWyAnnCVJcpd5xBnM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/3574694-hot-fudge-ice-cream-bar-dessert-Allrecipes-Magazine-4x3-1-8b0b0580bfb14ae9bb8a9b3acb421ad5.jpg",
+        "https://t3.ftcdn.net/jpg/03/97/46/66/360_F_397466683_4U8hMaUgWdFPNc8KMKUQ4aH2qR1yG0sA.jpg",
       cuisines: [
         "Beverages",
         "Biryani",
@@ -2125,31 +2057,4 @@ const resList = [
   },
 ];
 
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">Search</div>
-      <div className="res-container">
-        {/* Restaurant Cards */}
-        {resList.map((restaurant, index)=>(
-          <RestaurantCard key={restaurant.data.id} resData={restaurant}/>
-        ))}
-      </div>
-    </div>
-  );
-};
-
-const AppLayout = () => {
-  return (
-    <div className="app">
-      {/* Header */}
-      <Header />
-      {/* Body */}
-      <Body />
-      {/* Footer */}
-    </div>
-  );
-};
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);
+export default resList;

@@ -18,3 +18,37 @@
 - HTTPS
 - Tree Shaking ~ remove unused code
 - Different dev and prod bundles
+
+# YumBro Food delivery app
+
+1. Header
+  - Logo
+  - Nav Items
+2. Body
+  - Search
+  - Restaurant Container
+    - Restaurant Cards
+        - img
+        - name of restaurant, star rating, cuisine, delivery time
+3. Footer
+  - CopyRight
+  - Links
+  - Address
+  - Contact
+
+# Ways to Export/Import
+
+- Default
+  - export default Component;
+  - import Component from "path";
+
+- Named
+  - export const Component / export { Component };
+  - import { Component } from "path";
+
+# React Hooks
+
+- Normal JS Utility Functions
+- Imp Hooks
+  - useState() ~ Super Powerful State Variables
+  - useEffect() ~ 
